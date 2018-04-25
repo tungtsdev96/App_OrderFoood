@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back_ground_gray">
+
+        <RelativeLayout
+            android:layout_below="@+id/app_bar_layout"
+            android:background="@color/back_ground_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_250"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+            <ProgressBar
+                android:indeterminateTint="@android:color/holo_red_light"
+                android:id="@+id/progress_load_map"
+                android:padding="@dimen/size_70"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_200" />
+
+            <RelativeLayout
+                android:paddingTop="@dimen/size_250"
+                android:id="@+id/rlt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@color/colorwhite"
+                    android:id="@+id/rlt_infor_res"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_location_res"
+                        android:src="@drawable/ic_location_restuarant"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24" />
+
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_10"
+                        android:layout_toRightOf="@id/ic_location_res"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_name_res"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="Ten cua hang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textColor="@color/colorTextGray"
+                            android:id="@+id/tv_address_res"
+                            android:text="Dia chi cua hang"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@color/colorwhite"
+                    android:id="@+id/rlt_infor_customer"
+                    android:paddingTop="@dimen/padding_5"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:layout_below="@+id/rlt_infor_res"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_location_cus"
+                        android:src="@drawable/ic_location"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_cus"
+                        android:layout_marginLeft="@dimen/padding_10"
+                        android:layout_toRightOf="@id/ic_location_cus"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tv_customer"
+                                android:textColor="@color/colorblack"
+                                android:textStyle="bold"
+                                android:text="Ten khách hàng - sđt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tv_way_confirm_order"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/alo" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_address_cus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dia chi khách hàng"
+                            android:textColor="@color/colorTextGray" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:paddingTop="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:paddingLeft="@dimen/size_10"
+                        android:paddingRight="@dimen/size_10"
+                        android:layout_marginLeft="@dimen/padding_20"
+                        android:layout_toRightOf="@+id/ll_cus"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colordarkblue"
+                        android:text="SỬA"
+                        android:id="@+id/tv_config"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@color/colorwhite"
+                    android:id="@+id/rlt_time_ship"
+                    android:paddingTop="@dimen/padding_5"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:layout_below="@+id/rlt_infor_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ic_time_ship"
+                        android:src="@drawable/ic_time_ship"
+                        android:layout_width="@dimen/size_24"
+                        android:layout_height="@dimen/size_24" />
+
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/padding_10"
+                        android:layout_toRightOf="@id/ic_time_ship"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_24">
+
+                        <TextView
+                            android:gravity="center_vertical"
+                            android:id="@+id/tv_infor_time_ship"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="Sớm nhất có thể - 25/11 - "
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:textColor="@color/colorred"
+                            android:text="0 km"
+                            android:id="@+id/tv_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcv_infor_order"
+                    android:paddingRight="@dimen/padding_16"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:background="@drawable/bg_with_bottom_line"
+                    android:layout_marginTop="@dimen/padding_15"
+                    android:paddingBottom="@dimen/size_5"
+                    android:layout_below="@+id/rlt_time_ship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_infor_order"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_with_bottom_line"
+                    android:layout_below="@+id/rcv_infor_order"
+                    android:paddingTop="@dimen/padding_5"
+                    android:paddingBottom="@dimen/padding_5"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_45">
+
+                        <TextView
+                            android:textColor="@color/colorTextGray"
+                            android:id="@+id/tv_number_of_food_order"
+                            android:text="Tổng n phần "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_total_price"
+                            android:layout_gravity="right|center"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="50000 đ"
+                            android:gravity="right"
+                            android:layout_toRightOf="@+id/tv_number_of_food_order"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_45">
+
+                        <TextView
+                            android:textColor="@color/colorTextGray"
+                            android:text="@string/price_of_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_price_of_service"
+                            android:layout_gravity="right|center"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="5000 đ"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_45">
+
+                        <TextView
+                            android:textColor="@color/colorTextGray"
+                            android:text="@string/price_of_ship"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginLeft="@dimen/size_10"
+                            android:textColor="@color/colorred"
+                            android:text="0 km"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_distance_ship"/>
+
+                        <ImageView
+                            android:id="@+id/img_help"
+                            android:layout_marginLeft="@dimen/size_10"
+                            android:layout_width="@dimen/size_24"
+                            android:layout_height="@dimen/size_24"
+                            android:src="@drawable/ic_help"/>
+
+                        <TextView
+                            android:id="@+id/tv_price_ship"
+                            android:layout_gravity="right|center"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="10000 đ"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:paddingTop="@dimen/padding_5"
+                        android:paddingBottom="@dimen/padding_5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:textColor="@color/colorblack"
+                            android:text="@string/count_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_total"
+                            android:layout_gravity="right|center"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="50000 đ"
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:layout_marginBottom="@dimen/size_50"
+                    android:textSize="15sp"
+                    android:id="@+id/edt_add_note"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:layout_below="@+id/ll_infor_order"
+                    android:paddingTop="@dimen/size_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:hint="@string/note"
+                    android:background="@drawable/bg_with_bottom_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn_order"
+        android:clickable="true"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tv"
+            android:text="@string/navi_delivery"
+            android:textStyle="bold"
+            android:textColor="@color/colorwhite"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/ic_right_arrow_white"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_total_of_order"
+            android:text="76.000đ"
+            android:textColor="@color/colorwhite"
+            android:layout_marginRight="@dimen/padding_16"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_right_arrow_white"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

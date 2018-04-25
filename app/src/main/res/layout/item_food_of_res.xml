@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:background="@drawable/bg_normal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_food"
+        android:scaleType="centerInside"
+        android:layout_width="@dimen/size_90"
+        android:layout_height="@dimen/size_90" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:id="@+id/tv_percent_promotion"
+        android:textColor="@color/colorwhite"
+        android:text="-45%"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:background="@drawable/ic_promotion"
+        android:layout_width="@dimen/size_45"
+        android:layout_height="@dimen/size_45" />
+
+    <RelativeLayout
+        android:padding="@dimen/padding_10"
+        android:layout_toRightOf="@+id/img_food"
+        android:layout_toLeftOf="@+id/btn_add_food_to_cart"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name_food"
+            android:text="Cơm gà Hội An "
+            android:textColor="@color/colorblack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:id="@+id/tv_new_price_food"
+            android:text="150.000 đ"
+            android:textColor="@color/colorred"
+            android:layout_below="@id/tv_name_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_add_food_to_cart"
+        android:padding="@dimen/padding_5"
+        android:src="@drawable/ic_add_food"
+        android:layout_marginRight="@dimen/padding_5"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/size_35"
+        android:layout_height="@dimen/size_35" />
+
+</RelativeLayout>

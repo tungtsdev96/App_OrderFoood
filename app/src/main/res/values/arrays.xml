@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--filter type-->
+    <string-array name="filter_food_by">
+        <item>Danh mục</item>
+        <item>Quán ăn</item>
+        <item>Giá</item>
+    </string-array>
+
+    <string-array name="array_histrory_order">
+        <item>Tất cả</item>
+        <item>Đã hoàn thành</item>
+        <item>Đang vận chuyển</item>
+        <item>Đã hủy</item>
+    </string-array>
+
+    <string-array name="array_histrory_order_table">
+        <item>Tất cả</item>
+        <item>Đang xác minh</item>
+        <item>Đã hủy</item>
+        <item>Đã hoàn thành</item>
+    </string-array>
+
+    <string-array name="array_filter_order">
+        <item>Đặt giao hàng</item>
+        <item>Đặt chỗ</item>
+    </string-array>
+
+</resources>

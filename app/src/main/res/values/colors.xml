@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colordarkblue</color>
+    <color name="colorPrimaryDark">#FF0091C7</color>
+    <color name="colorAccent">#99dbff</color>
+
+    <color name="colorblue">#FF33B5E5</color>
+    <color name="colorpurple">#FFAA66CC</color>
+    <color name="colorgreen">#2f890e</color>
+    <color name="colororange">#FFFFBB33</color>
+    <color name="colorred">#ff0000</color>
+    <color name="color_red_press">#ff3a3a</color>
+    <color name="colordarkblue">#FF0099CC</color>
+    <color name="colordarkpurple">#FF9933CC</color>
+    <color name="colordarkgreen">#FF669900</color>
+    <color name="colordarkorange">#FFFF8800</color>
+    <color name="colordarkred">#d20000</color>
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="coloryellow">#FFFF00</color>
+    <color name="colorblack">#FF000000</color>
+    <color name="colorblacktran">#d0000000</color>
+
+    <color name="colorTran">#00ffffff</color>
+    <color name="colorGray">#e0e0e0</color>
+    <color name="colorBackgroundPress">#e6e6e6</color>
+    <color name="colorRipple">#abe7e7e7</color>
+    <color name="colorTextGray">#151515</color>
+    <color name="default_background">#FFFAFAFA</color>
+    <color name="back_ground_gray">#f2f2f2</color>
+</resources>

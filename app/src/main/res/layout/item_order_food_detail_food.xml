@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorGray"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/padding_16">
+
+    <RelativeLayout
+        android:id="@+id/rlt_detail_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_recycleview"
+        android:padding="@dimen/padding_16">
+
+        <RelativeLayout
+            android:id="@+id/rlt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cơm gà Hội An "
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/text_size_medium" />
+
+            <LinearLayout
+                android:id="@+id/ll_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name_food"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Giá/suất: "
+                    android:textColor="@color/colorblack" />
+
+                <TextView
+                    android:id="@+id/tv_new_price_food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name_food"
+                    android:text="150.000 đ"
+                    android:textColor="@color/colorred" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_old_price_food"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/tv_new_price_food"-->
+                <!--android:layout_marginLeft="@dimen/padding_16"-->
+                <!--android:layout_marginRight="@dimen/padding_16"-->
+                <!--android:background="@drawable/bg_tv_old_price"-->
+                <!--android:text="200.000 đ"-->
+                <!--android:textSize="10sp" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_count_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_price"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:clickable="true"
+                    android:id="@+id/img_decrease"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_25"
+                    android:background="@drawable/bg_gray"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_decrease" />
+
+                <TextView
+                    android:id="@+id/tv_number_of_food_order"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_25"
+                    android:background="@color/default_background"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <ImageView
+                    android:clickable="true"
+                    android:id="@+id/img_increase"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="@dimen/size_25"
+                    android:background="@drawable/bg_gray"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_add" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:clickable="true"
+                android:id="@+id/img_like"
+                android:layout_width="@dimen/size_25"
+                android:layout_height="@dimen/size_25"
+                android:layout_below="@+id/ll_count_order"
+                android:layout_marginTop="@dimen/padding_10"
+                android:background="@drawable/bg_button_like"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/padding_10"
+                android:layout_toRightOf="@+id/img_like"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/img_like"
+                android:id="@+id/tv_count_like_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_count_order"
+                android:layout_marginTop="@dimen/padding_5"
+                android:text="2 lượt thích"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btn_add_to_cart"
+            android:clickable="true"
+            android:textSize="16sp"
+            android:textColor="@color/colorwhite"
+            android:background="@drawable/bg_button_add_to_cart"
+            android:layout_marginLeft="@dimen/size_30"
+            android:maxLines="1"
+            android:layout_toRightOf="@id/rlt"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding_10"
+            android:text="@string/add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/rlt_detail_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        android:background="@drawable/bg_recycleview"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45"
+            android:background="@drawable/bg_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:text="@string/description_food"
+            android:textColor="@color/colorblack"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tv_description_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right|left"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_10"
+            android:text="Trong chế biến món ăn, kỹ thuật làm chín là khâu cuối cùng của kỹ thuật chế biến. Nó kế hợp với khâu phối hợp nguyên liệu và gia vị để tạo nên món ăn hoàn chỉnh."
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

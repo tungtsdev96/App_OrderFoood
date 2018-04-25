@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/size_10"
+    android:paddingBottom="@dimen/size_10"
+    android:paddingLeft="@dimen/padding_16"
+    android:paddingRight="@dimen/padding_16"
+    android:background="@drawable/bg_normal"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_location_gray"
+        android:layout_width="@dimen/size_30"
+        android:layout_height="@dimen/size_30" />
+
+    <TextView
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_toRightOf="@+id/img"
+        android:layout_toLeftOf="@+id/img_choose_location"
+        android:id="@+id/tv_id_location"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/colorblack"
+        android:text="Adress 1"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="@dimen/size_10"
+        android:layout_toRightOf="@+id/img"
+        android:layout_toLeftOf="@+id/img_choose_location"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/tv_id_location"
+        android:id="@+id/tv_name_address"
+        android:text="Phố Vọng Hai Bà Trưng"
+        android:textSize="14sp"
+        android:layout_marginLeft="@dimen/size_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@drawable/ic_choose_location"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/img_choose_location"
+        android:layout_width="@dimen/size_25"
+        android:layout_height="@dimen/size_25" />
+
+</RelativeLayout>

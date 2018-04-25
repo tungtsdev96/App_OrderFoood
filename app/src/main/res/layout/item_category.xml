@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_150"
+    android:clickable="true"
+    android:background="@drawable/bg_recycleview"
+    android:layout_height="@dimen/size_150">
+
+    <TextView
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingTop="@dimen/padding_10"
+        android:paddingLeft="@dimen/padding_16"
+        android:id="@+id/tv_name_category"
+        android:textColor="@color/colorblack"
+        android:text="Cơm trưa"
+        android:layout_centerHorizontal="true"
+        android:gravity="left"
+        android:layout_width="@dimen/size_150"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:padding="5dp"
+        android:layout_marginBottom="@dimen/padding_5"
+        android:layout_marginRight="@dimen/padding_5"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv_name_category"
+        android:id="@+id/img_category_food"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_100" />
+
+</RelativeLayout>

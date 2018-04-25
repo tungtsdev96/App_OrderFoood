@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navi_header_height"
+    android:background="@color/colordarkblue">
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_demo_cover"
+        android:id="@+id/img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlt_avatar"
+        android:padding="@dimen/padding_16"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerVertical="true"
+            android:layout_width="@dimen/avatar_size"
+            android:layout_height="@dimen/avatar_size"
+            android:src="@drawable/demo_food"
+            android:id="@+id/img_avatar"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginLeft="@dimen/padding_15"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="18sp"
+            android:textColor="@color/colorwhite"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

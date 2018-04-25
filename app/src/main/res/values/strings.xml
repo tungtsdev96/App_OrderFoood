@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">OrderFood</string>
+    <string name="google_map_api_key">AIzaSyDQnQkho92yGp-veGNvmeqHV76EhaMqpT0</string>
+
+    <!--menu navi-->
+    <string name="navi_home">Trang chủ</string>
+    <string name="navi_account">Quản lý tài khoản</string>
+    <string name="navi_notification">Thông báo</string>
+    <string name="navi_delivery">Đặt giao hàng</string>
+    <string name="navi_reservation">Đặt chỗ</string>
+    <string name="navi_favorite">Yêu thích</string>
+    <string name="navi_saved">Đã lưu</string>
+    <string name="navi_settings">Cài đặt</string>
+    <string name="navi_history">Lịch sử</string>
+    <string name="group_help">HỖ TRỢ</string>
+    <string name="navigation_drawer_open">open menu</string>
+    <string name="navigation_drawer_close">close menu</string>
+
+    <string name="login">ĐĂNG NHẬP</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="notification">Thông báo</string>
+    <string name="food_catalog">Danh mục thực phẩm</string>
+    <string name="see_all">Xem tất cả</string>
+    <string name="food_placed_many">Được mua nhiều</string>
+    <string name="food_recommended">Được đề xuất</string>
+    <string name="order">Đơn hàng</string>
+    <string name="product">Sản phẩm</string>
+    <string name="count_money">Tổng số tiền</string>
+    <string name="my_notification">Thông báo của tôi</string>
+    <string name="connect_social">Kết nối mạng xã hội</string>
+    <string name="bill_manager">Quản lý đơn hàng</string>
+    <string name="order_received">Đơn hàng đã tiếp nhận</string>
+    <string name="order_waiting_pay">Đơn hàng chờ thanh toán</string>
+    <string name="order_shipping">Đơn hàng đang vận chuyển</string>
+    <string name="order_success">Đơn hàng thành công</string>
+    <string name="order_cancel">Đơn hàng đã hủy</string>
+    <string name="logout">ĐĂNG XUẤT</string>
+
+    <!--dialog sort-->
+    <string name="sort_by">Sắp xếp theo: </string>
+    <string name="sort_price_1">"    " Giá: cao - thấp</string>
+    <string name="sort_price_2">"    " Giá: thấp - cao</string>
+    <string name="newest">    "    " Mới nhất</string>
+
+    <!--filter food-->
+    <string name="reset_filter">THIẾT LẬP LẠI</string>
+    <string name="apply_filter">ÁP DỤNG</string>
+    <string name="filter">Lựa chọn bộ lọc</string>
+    <string name="all">Tất cả</string>
+    <string name="name_res">Tên cửa hàng</string>
+
+    <!--order-->
+    <string name="continues">Tiếp tục</string>
+    <string name="delete_order">Xóa</string>
+    <string name="infor_res">Thông tin cửa hàng</string>
+    <string name="description_food">Mô tả món ăn</string>
+    <string name="infor_customer_to_receive" formatted="false">%s - %s</string>
+    <string name="delivery_time" formatted="false">%s - %s -" "</string>
+    <string name="delivery_distance" formatted="false">%s km</string>
+    <string name="number_of_food_order" formatted="false">Tổng %d phần</string>
+    <string name="id_address" formatted="false"> Address %d</string>
+
+    <!--food-->
+    <string name="price" formatted="false">%d đ</string>
+    <string name="detail">Chi tiết</string>
+    <string name="add_to_cart">Thêm vào giỏ</string>
+    <string name="infor_cart" formatted="false"> %d Phần - %dđ</string>
+    <string name="continues_order">Tiếp tục chọn món</string>
+    <string name="note">Thêm ghi chú ...</string>
+    <string name="alo">" "- Gọi điện</string>
+    <string name="price_of_service">Phí dịch vụ:  10%</string>
+    <string name="price_of_ship">Phí vận chuyển:</string>
+    <string name="count_all">Tổng cộng</string>
+    <string name="search_location">Tìm kiếm địa điểm</string>
+    <string name="hint_phone"><b>Số điện thoại</b></string>
+    <string name="done">Xong</string>
+    <string name="username">Tên tài khoản</string>
+    <string name="pass">Mật khẩu</string>
+    <string name="forget_pass">Quên mật khẩu</string>
+    <string name="resiger">Đăng kí</string>
+    <string name="first_name">Họ</string>
+    <string name="last_name">Tên</string>
+    <string name="phone_email">Email/Số điện thoại</string>
+    <string name="cancel">Hủy</string>
+    <string name="add_location">Thêm địa điểm</string>
+    <string name="odering">Sắp đến</string>
+    <string name="wait_ordering">%d\nPhút</string>
+    <string name="total_price">Tổng cộng:" " </string>
+    <string name="total_history"></string>
+    <string name="loading">Loading</string>
+    <string name="comment">Bình luận</string>
+    <string name="excellent">Tuyệt vời</string>
+    <string name="good">Khá tốt</string>
+    <string name="arange">Trung bình</string>
+    <string name="average">Trung bình</string>
+    <string name="bad">Kém</string>
+    <string name="share">Chia sẻ</string>
+    <string name="rating">Đánh giá</string>
+    <string name="total">Tổng</string>
+    <string name="res_type">Loại cửa hàng</string>
+    <string name="order_table">Đặt bàn</string>
+    <string name="infor"><![CDATA[Thông tin & liên hệ]]></string>
+    <string name="number_of_people">Số người</string>
+
+
+</resources>

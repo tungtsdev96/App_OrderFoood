@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_above="@+id/ll_price"
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rlt_detail_order"
+            android:padding="@dimen/size_10"
+            android:background="@drawable/bg_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv"
+                android:text="Mã đặt hàng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:id="@+id/tv_orderId"
+                android:text="123123123"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/size_15"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_orderId"
+                android:text="Địa chỉ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:layout_alignLeft="@+id/tv_orderId"
+                android:layout_below="@+id/tv_orderId"
+                android:id="@+id/tv_address_order"
+                android:text="123123123"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_address_order"
+                android:text="Số điện thoại"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:layout_alignLeft="@+id/tv_address_order"
+                android:layout_below="@+id/tv_address_order"
+                android:id="@+id/tv_phone_order"
+                android:text="123123123"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_phone_order"
+                android:text="Ngày giao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:layout_alignLeft="@+id/tv_phone_order"
+                android:layout_below="@+id/tv_phone_order"
+                android:id="@+id/tv_delivery_time"
+                android:text="123123123"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_delivery_time"
+                android:text="Trạng thái"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:layout_alignLeft="@+id/tv_delivery_time"
+                android:layout_below="@+id/tv_delivery_time"
+                android:id="@+id/tv_status"
+                android:text="123123123"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_below="@+id/tv_status"
+                android:text="Bởi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/size_5"
+                android:id="@+id/tv_"
+                android:layout_alignLeft="@+id/tv_status"
+                android:layout_below="@+id/tv_status"
+                android:text="Group 12 - PTPMCN"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="@dimen/size_5"
+                android:layout_marginBottom="@dimen/size_5"
+                android:clickable="true"
+                android:background="@drawable/bg_btn_rate_of_detail_order"
+                android:textColor="@color/colorwhite"
+                android:paddingBottom="@dimen/size_5"
+                android:paddingTop="@dimen/size_5"
+                android:paddingLeft="@dimen/size_10"
+                android:paddingRight="@dimen/size_10"
+                android:layout_alignLeft="@+id/tv_status"
+                android:layout_below="@+id/tv_"
+                android:id="@+id/btn_rate"
+                android:text="@string/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:paddingTop="@dimen/size_5"
+            android:id="@+id/rcv_order_detail"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/rlt_detail_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_price"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/size_10"
+            android:paddingBottom="@dimen/size_10"
+            android:background="@drawable/bg_with_bottom_line"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorblack"
+                android:text="@string/total"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/tv_total_order"
+                android:textStyle="bold"
+                android:textColor="@color/colorblack"
+                android:text="@string/total"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="@dimen/size_10"
+            android:paddingBottom="@dimen/size_10"
+            android:background="@drawable/bg_with_bottom_line"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/colorblack"
+                android:text="@string/price_of_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/tv_price_of_service"
+                android:textStyle="bold"
+                android:textColor="@color/colorblack"
+                android:text="@string/total"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/colorblack"
+                android:text="@string/price_of_ship"
+                android:layout_marginTop="@dimen/size_8"
+                android:layout_below="@+id/tv_price_of_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16sp"
+                android:layout_below="@+id/tv_price_of_service"
+                android:layout_marginTop="@dimen/size_8"
+                android:id="@+id/tv_price_ship"
+                android:textStyle="bold"
+                android:textColor="@color/colorblack"
+                android:text="@string/total"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/size_10"
+            android:paddingTop="@dimen/size_10"
+            android:paddingBottom="@dimen/size_10"
+            android:background="@drawable/bg_with_bottom_line"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/total"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/tv_total"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/total"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

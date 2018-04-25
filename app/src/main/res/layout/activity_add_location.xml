@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rlt_search"
+        android:background="@color/colordarkred"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:layout_width="@dimen/size_45"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_back_white"/>
+
+        <android.support.v7.widget.CardView
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="@dimen/size_5"
+            android:layout_marginBottom="@dimen/size_5"
+            android:layout_marginTop="@dimen/size_10"
+            android:layout_marginLeft="@dimen/size_45"
+            android:layout_toLeftOf="@+id/frl_done"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:textSize="14sp"
+                    android:paddingLeft="@dimen/size_5"
+                    android:hint="Tìm kiếm địa điểm"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:scaleY="0.8"
+                    android:scaleX="0.8"
+                    android:src="@drawable/ic_search_gray"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="@dimen/size_40"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <FrameLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/frl_done"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:visibility="visible"
+                android:id="@+id/img_current_location"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_width="@dimen/size_45"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_current_location"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_search_location"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size_8"
+                android:textSize="16sp"
+                android:textColor="@color/colorwhite"
+                android:gravity="center"
+                android:text="@string/done"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_below="@+id/rlt_search"
+        android:layout_above="@+id/btn_add_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <TextView
+        android:id="@+id/btn_add_location"
+        android:textColor="@color/colorwhite"
+        android:gravity="center"
+        android:text="@string/add_location"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45" />
+
+</RelativeLayout>

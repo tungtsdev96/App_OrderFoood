@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size_10"
+    android:background="@color/colorGray">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="@dimen/size_50"
+        android:layout_height="@dimen/size_50"
+        android:src="@drawable/ic_demo"/>
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorblack"
+        android:textSize="16sp"
+        android:id="@+id/tv_name_customer"
+        android:text="Sơn Tùng"
+        android:layout_marginLeft="@dimen/size_10"
+        android:layout_toRightOf="@+id/img_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_number_of_food_order"
+        android:textColor="@color/colorblack"
+        android:textSize="16sp"
+        android:text=" - 10 phần"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_name_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottom_sheet"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:background="@color/colorred"
+            android:id="@+id/rlt_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorwhite"
+                android:text="@string/navi_delivery"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_done"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorwhite"
+                android:text="@string/done"
+                android:textSize="16sp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rlt_title"
+            android:id="@+id/rlt_search_location"
+            android:background="@drawable/bg_with_bottom_line"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:padding="@dimen/padding_10"
+                android:src="@drawable/ic_search_gray"
+                android:id="@+id/img"
+                android:layout_centerVertical="true"
+                android:layout_width="@dimen/size_45"
+                android:layout_height="@dimen/size_45" />
+
+            <TextView
+                android:id="@+id/btn_search_location"
+                android:clickable="true"
+                android:textColor="@drawable/note_text_color"
+                android:paddingLeft="@dimen/size_10"
+                android:gravity="center_vertical"
+                android:text="@string/search_location"
+                android:layout_toRightOf="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_location"
+            android:background="@color/colorwhite"
+            android:layout_below="@+id/rlt_search_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_below="@+id/rcv_location"
+            android:background="@color/colorwhite"
+            android:layout_marginTop="@dimen/size_15"
+            android:id="@+id/rlt_add_infor_customer_to_order"
+            android:paddingTop="@dimen/size_10"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingBottom="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:paddingBottom="@dimen/padding_5"
+                android:background="@drawable/bg_with_bottom_line"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:padding="@dimen/padding_5"
+                        android:src="@drawable/ic_account"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40" />
+
+                    <EditText
+                        android:enabled="false"
+                        android:id="@+id/edt_name_customer"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:textColor="@color/colorblack"
+                        android:textStyle="bold"
+                        android:hint="Người nhận"
+                        android:background="@color/colorwhite"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:padding="@dimen/padding_5"
+                        android:src="@drawable/ic_phone"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40" />
+
+                    <EditText
+                        android:id="@+id/edt_phone_customer"
+                        android:maxLines="1"
+                        android:layout_marginLeft="@dimen/size_40"
+                        android:layout_marginRight="@dimen/size_40"
+                        android:paddingLeft="@dimen/padding_5"
+                        android:textColor="@color/colorblack"
+                        android:textStyle="bold"
+                        android:hint="@string/hint_phone"
+                        android:background="@color/colorwhite"
+                        android:textSize="14sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_40" />
+
+                    <ImageView
+                        android:id="@+id/img_contact"
+                        android:layout_alignParentRight="true"
+                        android:padding="@dimen/padding_5"
+                        android:src="@drawable/ic_account_blue"
+                        android:layout_width="@dimen/size_40"
+                        android:layout_height="@dimen/size_40"
+                        android:layout_gravity="center_vertical"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/size_50"
+                android:background="@color/colorwhite"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="THỜI GIAN ĐẾN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_35" />
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/size_35"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_date_receive"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="@dimen/padding_5"
+                            android:src="@drawable/ic_calendar"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_40" />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:gravity="center|left"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="@dimen/padding_5"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:text="15/11/2017"
+                            android:background="@color/colorwhite"
+                            android:textSize="15sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_40" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_time_receive"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:padding="@dimen/padding_5"
+                            android:src="@drawable/ic_time_ship_"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="@dimen/size_40"
+                            android:layout_height="@dimen/size_40" />
+
+                        <TextView
+                            android:id="@+id/tv_time"
+                            android:text="Sớm nhất có thể"
+                            android:gravity="left|center"
+                            android:paddingLeft="@dimen/padding_5"
+                            android:textColor="@color/colorblack"
+                            android:textStyle="bold"
+                            android:background="@color/colorwhite"
+                            android:textSize="15sp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_40"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/rlt_add_infor_customer_to_order"
+            android:layout_marginTop="@dimen/size_15"
+            android:background="@color/colorwhite"
+            android:id="@+id/rlt1"
+            android:paddingTop="@dimen/size_10"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingBottom="@dimen/size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:text="XÁC NHẬN QUA"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_35" />
+
+            <TextView
+                android:textColor="@color/colorwhite"
+                android:gravity="center"
+                android:text="Gọi điện"
+                android:background="@drawable/bg_green"
+                android:layout_marginTop="@dimen/size_35"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

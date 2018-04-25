@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGray"
+    android:paddingBottom="@dimen/padding_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_recycleview"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45"
+            android:background="@drawable/bg_gray">
+
+            <TextView
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_45"
+                android:text="@string/infor_res"
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/text_size_medium" />
+
+            <TextView
+                android:id="@+id/tv_detail_res"
+                android:paddingLeft="@dimen/padding_16"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+                android:text="@string/detail"
+                android:layout_centerVertical="true"
+                android:paddingRight="@dimen/padding_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_45"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_10"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/tv_name_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tên cửa hàng "
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_address_res"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_5"
+                android:text="Địa chỉ"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/bg_with_bottom_line"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/size_5"
+    android:paddingBottom="@dimen/size_10">
+
+
+    <RelativeLayout
+        android:id="@+id/rlt_infor_cus"
+        android:paddingTop="@dimen/size_5"
+        android:paddingBottom="@dimen/size_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="@dimen/size_40"
+            android:layout_height="@dimen/size_40"
+            android:src="@drawable/ic_demo"/>
+
+        <TextView
+            android:text="Sơn Tùng"
+            android:textStyle="bold"
+            android:textColor="@color/colorblack"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/size_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_name_cus"/>
+
+        <TextView
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colordarkgreen"
+            android:text="7.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tv_rate_score"/>
+
+        <TextView
+            android:paddingBottom="@dimen/size_5"
+            android:paddingTop="@dimen/size_5"
+            android:id="@+id/tv_content"
+            android:textColor="@color/colorblack"
+            android:text="Ddaya laf binh luan"
+            android:background="@drawable/bg_with_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_cus"
+            android:layout_alignLeft="@+id/tv_name_cus"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

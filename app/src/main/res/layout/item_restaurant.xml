@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:clickable="true"
+    android:background="@drawable/bg_normal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_res"
+        android:scaleType="centerInside"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="@dimen/size_100" />
+
+    <RelativeLayout
+        android:padding="@dimen/padding_10"
+        android:layout_toRightOf="@+id/img_res"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/tv_name_res"
+            android:text="Cơm gà Hội An "
+            android:textColor="@color/colorblack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="14sp"
+            android:id="@+id/tv_address"
+            android:layout_below="@+id/tv_name_res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ngách 3/40 Ngõ thống nhất đại la"/>
+
+        <LinearLayout
+            android:id="@+id/ll_distance"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_near_me"
+                android:layout_width="@dimen/size_20"
+                android:layout_height="@dimen/size_20" />
+
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/tv_distance_near_me"
+                android:layout_marginLeft="@dimen/size_10"
+                android:text="2.3 km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/bg_normal"
+    android:padding="@dimen/size_10"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:paddingTop="@dimen/size_10"
+        android:paddingBottom="@dimen/size_10"
+        android:id="@+id/rlt_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_rate"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:isIndicator="false"
+            android:numStars="4"
+            android:layout_marginLeft="@dimen/size_15"
+            android:layout_toRightOf="@id/tv_rate"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_below="@+id/rlt_rate"
+        android:padding="@dimen/size_10"
+        android:id="@+id/edt_content"
+        android:textSize="14sp"
+        android:gravity="top"
+        android:hint="Để lại phản hồi của bạn ở đây :)))"
+        android:background="@drawable/bg_with_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_100" />
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:gravity="center"
+        android:padding="@dimen/size_10"
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_below="@+id/edt_content"
+        android:background="@drawable/bg_button_logout"
+        android:text="Gửi"
+        android:layout_width="@dimen/size_100"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_detail_food"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50">
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img_sort_food"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sort"
+                android:background="@drawable/bg_recycleview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:visibility="visible"
+                android:clickable="true"
+                android:id="@+id/img_filter_food"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_filter"
+                android:background="@drawable/bg_recycleview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/img_change_screen_food"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_grid"
+                android:background="@drawable/bg_recycleview"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_delivery"
+            android:clickable="true"
+            android:background="@drawable/bg_normal"
+            android:layout_below="@+id/ll_detail_food"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

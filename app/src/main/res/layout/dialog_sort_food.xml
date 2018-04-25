@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_16">
+
+    <TextView
+        android:textStyle="normal"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/text_size_big"
+        android:text="@string/sort_by"
+        android:textColor="@color/colorblack"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45" />
+
+        <RadioGroup
+            android:id="@+id/group_sort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/rd_price1"
+                android:text="@string/sort_price_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45" />
+
+            <RadioButton
+                android:id="@+id/rd_price2"
+                android:text="@string/sort_price_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45" />
+
+
+            <RadioButton
+                android:id="@+id/rd_newest"
+                android:text="@string/newest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45" />
+
+        </RadioGroup>
+
+</LinearLayout>

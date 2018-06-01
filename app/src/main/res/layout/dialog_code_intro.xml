@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_16"
+    android:background="@android:color/transparent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/t">
+
+        <EditText
+            android:id="@+id/edt_intro_code"
+            android:padding="@dimen/padding_5"
+            android:textSize="16sp"
+            android:textColor="@color/colorblack"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:hint="Nhập mã giới thiệu ở đây"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_send"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/t"
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

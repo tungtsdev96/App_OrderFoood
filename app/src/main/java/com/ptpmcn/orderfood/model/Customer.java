@@ -8,16 +8,21 @@ import java.io.Serializable;
 
 public class Customer implements Serializable {
 
+
     /**
      * customer_id : 1
      * username : linhpham
      * password : 123
      * customer_first_name : Linh
      * customer_last_name : Pham
-     * customer_name : Phạm Hải Linh
+     * customer_name : Pháº¡m Háº£i Linh
      * customer_phone : 01667645238
      * customer_email : linhphamdev96@gmail.com
      * token_id : 123456
+     * intro_key : IRSVJQVX8B
+     * shared : 1
+     * coin : 40
+     * put_key : 0
      */
 
     private int customer_id;
@@ -29,8 +34,10 @@ public class Customer implements Serializable {
     private String customer_phone;
     private String customer_email;
     private String token_id;
-
-    public Customer(){}
+    private String intro_key;
+    private String shared;
+    private int coin;
+    private int put_key;
 
     public int getCustomer_id() {
         return customer_id;
@@ -102,5 +109,37 @@ public class Customer implements Serializable {
 
     public void setToken_id(String token_id) {
         this.token_id = token_id;
+    }
+
+    public String getIntro_key() {
+        return intro_key;
+    }
+
+    public void setIntro_key(String intro_key) {
+        this.intro_key = intro_key;
+    }
+
+    public String getShared() {
+        return shared;
+    }
+
+    public void setShared(String shared) {
+        this.shared = shared;
+    }
+
+    public int getCoin() {
+        return coin;
+    }
+
+    public void setCoin(int coin) {
+        this.coin = coin;
+    }
+
+    public int getPut_key() {
+        return put_key;
+    }
+
+    public void setPut_key(int put_key) {
+        this.put_key = put_key;
     }
 }

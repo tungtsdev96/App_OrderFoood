@@ -2,7 +2,6 @@ package com.ptpmcn.orderfood.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.widget.TableLayout;
 
 import com.ptpmcn.orderfood.R;
 import com.ptpmcn.orderfood.adapter.ViewPagerAdapter;
@@ -21,7 +20,7 @@ public class AuthActivity extends BaseActivity{
 
     @Override
     public int getLayoutResourceId() {
-        return R.layout.fragment_auth;
+        return R.layout.activity_auth;
     }
 
     @Override
@@ -34,8 +33,8 @@ public class AuthActivity extends BaseActivity{
 
     private void innitViewPager() {
         adapter  = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(LoginFragment.newInstance("Login"),"Login");
-        adapter.addFrag(RegisterAccountFragment.newInstance("Register"),"Register");
+        adapter.addFrag(LoginFragment.newInstance("Login"),"Đăng nhập");
+        adapter.addFrag(RegisterAccountFragment.newInstance("Register"),"Đăng kí");
         view_pager_auth.setOffscreenPageLimit(3);
         view_pager_auth.setAdapter(adapter);
         tab_auth.setupWithViewPager(view_pager_auth);

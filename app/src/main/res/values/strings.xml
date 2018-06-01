@@ -102,5 +102,8 @@
     <string name="infor"><![CDATA[Thông tin & liên hệ]]></string>
     <string name="number_of_people">Số người</string>
 
+    //fb
+    <string name="facebook_app_id">165160474154317</string>
+    <string name="fb_login_protocol_scheme">fb165160474154317</string>
 
 </resources>

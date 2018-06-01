@@ -26,7 +26,9 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RatingBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -104,6 +106,10 @@ public class DetailRestaurantActivity extends BaseActivity implements View.OnCli
     RcvCommentAdapter rcvCommentAdapter;
 
     LinearLayout ll_add_comment,ll_share,ll_add_rate;
+
+    //load
+    ProgressBar progress_bar;
+    RelativeLayout rlt_infor;
 
     @Override
     public int getLayoutResourceId() {
@@ -412,12 +418,17 @@ public class DetailRestaurantActivity extends BaseActivity implements View.OnCli
                 String addressCurrentLocation = GoogleMapUtils.getAddress(DetailRestaurantActivity.this,location);
                 ApiFactory.getApiGoogleMaps().getDirection(addressCurrentLocation,restaurant.getRestaurent_address(),getString(R.string.google_map_api_key)).enqueue(new BaseCallBack<PathGoogleResponse>(DetailRestaurantActivity.this) {
                     @Override
-                    public void onSuccess(PathGoogleResponse result) {
+                    public void onSuccess(final PathGoogleResponse result) {
                         try {
-                            String distance = result.getRoutes().get(0).getLegs().get(0).getDistance().getText();
-                            String s = "<b>"+distance + "</b>" + " (Từ vị trí hiện tại)";
-                            tv_distance.setText(Html.fromHtml(s));
-                            stopLocationUpdates();
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    String distance = result.getRoutes().get(0).getLegs().get(0).getDistance().getText();
+                                    String s = "<b>"+distance + "</b>" + " (Từ vị trí hiện tại)";
+                                    tv_distance.setText(Html.fromHtml(s));
+                                    stopLocationUpdates();
+                                }
+                            });
                         } catch (Exception e){
                             Log.e(DetailRestaurantActivity.this.getLocalClassName(),"Loi");
                         }

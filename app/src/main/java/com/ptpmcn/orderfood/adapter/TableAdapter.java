@@ -24,6 +24,15 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.TableViewHol
     private Context context;
     private ArrayList<Table> tables;
     private LayoutInflater layoutInflater;
+    private boolean isSearch;
+
+    public boolean isSearch() {
+        return isSearch;
+    }
+
+    public void setSearch(boolean search) {
+        isSearch = search;
+    }
 
     public TableAdapter(Context context, ArrayList<Table> tables) {
         this.context = context;
@@ -51,6 +60,11 @@ public class TableAdapter extends RecyclerView.Adapter<TableAdapter.TableViewHol
                 holder.btn_table.setBackgroundResource(R.drawable.bg_green);
             }
         } else {
+            if (!isSearch){
+                holder.btn_table.setText(table.getTable_number()+"");
+            } else {
+                holder.btn_table.setText("x");
+            }
             holder.btn_table.setBackgroundResource(R.drawable.bg_red);
         }
         holder.btn_table.setOnClickListener(new View.OnClickListener() {

@@ -358,6 +358,60 @@
                         android:layout_height="wrap_content">
                     </android.support.v7.widget.RecyclerView>
 
+                    <LinearLayout
+                        android:id="@+id/ll_note"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16"
+                        android:layout_below="@+id/rcv_table"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/bg_green"
+                                android:layout_centerVertical="true"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp" />
+
+                            <TextView
+                                android:textColor="@color/colorblack"
+                                android:layout_marginLeft="@dimen/size_30"
+                                android:gravity="center_vertical"
+                                android:text="Có thể chọn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:background="@drawable/bg_red"
+                                android:layout_centerVertical="true"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp" />
+
+                            <TextView
+                                android:textColor="@color/colorblack"
+                                android:layout_marginLeft="@dimen/size_30"
+                                android:gravity="center_vertical"
+                                android:text="Không thể chọn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
                     <TextView
                         android:id="@+id/btn_order_table"
                         android:drawableLeft="@drawable/ic_delivery_white"
@@ -369,7 +423,7 @@
                         android:text="@string/order_table"
                         android:layout_marginRight="@dimen/padding_16"
                         android:layout_marginLeft="@dimen/padding_16"
-                        android:layout_below="@+id/rcv_table"
+                        android:layout_below="@+id/ll_note"
                         android:background="@drawable/bg_order_table"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/size_45" />

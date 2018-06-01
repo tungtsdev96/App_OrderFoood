@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/ad1"
+                android:src="@drawable/bg_auth"
                 app:layout_collapseMode="parallax" />
 
             <android.support.v7.widget.Toolbar
@@ -50,9 +50,14 @@
         android:layout_height="wrap_content">
 
         <android.support.design.widget.TabLayout
+            android:elevation="4dp"
             android:id="@+id/tab_auth"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size_50">
+            android:layout_height="@dimen/size_50"
+            app:tabGravity="fill"
+            app:tabBackground="@color/back_ground_gray"
+            app:tabTextColor="@color/colorblack"
+            app:tabSelectedTextColor="@color/colorred">
         </android.support.design.widget.TabLayout>
 
         <android.support.v4.view.ViewPager
@@ -63,7 +68,5 @@
         </android.support.v4.view.ViewPager>
 
     </RelativeLayout>
-
-
 
 </android.support.design.widget.CoordinatorLayout>

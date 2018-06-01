@@ -103,7 +103,7 @@ public class AddInforOrderTableActivity extends BaseActivity implements View.OnC
                 Intent intent = new Intent(AddInforOrderTableActivity.this, ListOrderOfCustomerActivity.class);
                 intent.setAction("");
                 startActivity(intent);
-
+                finish();
             }
         });
     }

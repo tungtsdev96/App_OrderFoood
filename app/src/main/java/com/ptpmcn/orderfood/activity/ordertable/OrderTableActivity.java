@@ -257,6 +257,7 @@ public class OrderTableActivity extends BaseActivity implements View.OnClickList
                     return;
                 } else {
                     try {
+                        tableAdapter.setSearch(true);
                         arrTable.clear(); tableAdapter.notifyDataSetChanged();
                         arrTable.addAll(coppyTables); tableAdapter.notifyDataSetChanged();
                         String start_time = tv_date.getText().toString() + " " + tv_time.getText().toString();
@@ -411,5 +412,11 @@ public class OrderTableActivity extends BaseActivity implements View.OnClickList
 //            }
 //        }
 //        arr.remove(index);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
     }
 }

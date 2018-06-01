@@ -43,4 +43,32 @@ public interface ApiCustomer {
     @FormUrlEncoded
     Call<ResponseBody> unLike(@Field("productId") int productId,
                             @Field("customerId") int customerId);
+
+    //login
+    @POST("/api/customer/login")
+    @FormUrlEncoded
+    Call<ArrayList<Customer>> login(@Field("username") String user,
+                         @Field("password") String pass);
+
+    //register
+    @POST("/api/customer/login")
+    @FormUrlEncoded
+    Call<ResponseBody> register(@Field("username") String user,
+                          @Field("password") String pass,
+                          @Field("firstname") String firstname,
+                          @Field("lastname") String lastname,
+                          @Field("name") String name,
+                          @Field("phone") String phone,
+                          @Field("email") String email);
+
+    ///input intro
+    @GET("/api/customer/input_intro_key")
+    Call<ResponseBody> inputIntroCode(@Query("customer_id") int customerId,
+                                      @Query("intro_key") String intro_key);
+
+    //update coint
+    @GET("/api/customer/update-coin")
+    Call<ResponseBody> updateCoin(@Query("customer_id") int customerId,
+                                  @Query("coin") int coin);
+
 }

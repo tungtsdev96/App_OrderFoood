@@ -107,9 +107,9 @@ public class SetDetiveryDetailActivity extends BaseActivity implements View.OnCl
     private void innitRcvLocationOfCustomer() {
         adapterLocation = new AddLocationOfOrderInforAdapter(this,arr_address);
         rcv_location.setAdapter(adapterLocation);
-        rcv_location.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL_LIST));
+//        rcv_location.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL_LIST));
         rcv_location.setLayoutManager(new LinearLayoutManager(this));
-        ApiFactory.getApiCustomer().getListAddress(AccountUtil.fakeCustomer().getCustomer_id()).enqueue(new BaseCallBack<ArrayList<AddressOrder>>(this) {
+        ApiFactory.getApiCustomer().getListAddress(AccountUtil.getInstance(this).getCustomer().getCustomer_id()).enqueue(new BaseCallBack<ArrayList<AddressOrder>>(this) {
             @Override
             public void onSuccess(ArrayList<AddressOrder> result) {
                 arr_address.addAll(result);
@@ -137,7 +137,6 @@ public class SetDetiveryDetailActivity extends BaseActivity implements View.OnCl
                 finish();
                 break;
             case R.id.btn_search_location:
-                Toast.makeText(this, "dasd", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(SetDetiveryDetailActivity.this, AddLocationActivity.class);
                 startActivityForResult(intent,666);
                 break;

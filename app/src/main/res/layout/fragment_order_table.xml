@@ -28,6 +28,7 @@
 
 
     <android.support.v7.widget.RecyclerView
+        android:paddingLeft="@dimen/padding_16"
         android:layout_below="@+id/filter"
         android:id="@+id/rcv_"
         android:layout_width="match_parent"

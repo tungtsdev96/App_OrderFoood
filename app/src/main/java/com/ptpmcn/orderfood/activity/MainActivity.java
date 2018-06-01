@@ -1,6 +1,10 @@
 package com.ptpmcn.orderfood.activity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -8,10 +12,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.facebook.FacebookSdk;
 import com.ptpmcn.orderfood.R;
 import com.ptpmcn.orderfood.fragment.HomeFragment;
 import com.ptpmcn.orderfood.fragment.ListFoodLikedFragment;
@@ -20,6 +27,8 @@ import com.ptpmcn.orderfood.fragment.ProfileFragment;
 import com.ptpmcn.orderfood.utils.AccountUtil;
 import com.ptpmcn.orderfood.utils.constant.Constant;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Stack;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -47,6 +56,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        ///////////////////////////////////////////////////////
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         CircleImageView img_profile = navigationView.getHeaderView(0).findViewById(R.id.img_avatar);
@@ -57,6 +67,24 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         if (backStack == null)
             backStack = new Stack<>();
         pushFragment(HomeFragment.newInstance(), -1);
+
+        // Add code to print out the key hash
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo(
+                    getPackageName(),
+                    PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.e("tungts","dasdas");
+        } catch (NoSuchAlgorithmException e) {
+            Log.e("tungts","daaaaaaasdas");
+
+        }
+        FacebookSdk.sdkInitialize(this);
     }
 
     @Override
@@ -68,7 +96,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 pushFragment(HomeFragment.newInstance());
                 break;
             case R.id.menu_navi_account:
-                pushFragment(ProfileFragment.newInstance());
+                if (AccountUtil.getInstance(this).isLogin()){
+                    pushFragment(ProfileFragment.newInstance());
+                    return true;
+                }
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(MainActivity.this, AuthActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    }
+                }, 200);
                 break;
             case R.id.menu_navi_delivery:
                 new android.os.Handler().postDelayed(new Runnable() {
@@ -106,25 +145,25 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            finish();
         }
 
-        if (animating){
-            return;
-        }
+//        if (animating){
+//            return;
+//        }
 
         // Check if activity exists.
         // This is to prevent invoking "popFragment[ing]" from the activit.
 
-        Fragment fragment = backStack.peek();
+//        Fragment fragment = backStack.peek();
 //        if (fragment instanceof ProfileFragment
 //                || fragment instanceof ReservationFragment ) {
 //            popFragment(R.anim.slide_out);
 //        }
 //
-        if(fragment instanceof HomeFragment){
-            finish();
-        }
+//        if(fragment instanceof HomeFragment){
+//            finish();
+//        }
 //        overridePendingTransition(R.anim.slide_up, R.anim.slide_down);
     }
 
